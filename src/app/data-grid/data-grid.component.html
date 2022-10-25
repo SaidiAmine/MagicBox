@@ -1,0 +1,36 @@
+<h2>Testing data-grid</h2>
+<h5 *ngIf="employees?.length < 1">Oops, nothing to show here</h5>
+<table class="table" border="1" *ngIf="employees?.length > 0">
+  <thead>
+    <tr>
+      <th scope="col">
+        <a href="#" class="sort-by" (click)="sortBy('id')">Id</a>
+      </th>
+      <th scope="col">
+        <a href="#" class="sort-by" (click)="sortBy('firstName')">First Name</a>
+      </th>
+      <th scope="col">
+        <a href="#" class="sort-by" (click)="sortBy('lastName')">Last Name</a>
+      </th>
+      <th scope="col">
+        <a href="#" class="sort-by" (click)="sortBy('status')">Status</a>
+      </th>
+      <th scope="col">
+        <a href="#" class="sort-by" (click)="sortBy('salary')">Salary</a>
+      </th>
+    </tr>
+  </thead>
+
+  <tr *ngFor="let employee of employees">
+    <td>{{ employee.id }}</td>
+    <td>{{ employee.firstName }}</td>
+    <td>{{ employee.lastName }}</td>
+    <td>{{ employee.status }}</td>
+    <td>{{ employee.salary | currency:employee.currency.currencyCode }} </td>
+  </tr>
+</table>
+
+<!-- <p>{{IntegerValue |currency:'INR':'symbol':'3.0'}}</p>
+
+-->
+
