@@ -9,7 +9,7 @@ import { Employee, Status } from './models/employee.model';
 export class AppComponent implements OnInit {
 
   name = 'Angular ' + VERSION.major;
-  mockedEmployees: Employee[];
+  mockedEmployees: Employee[] = [];
   ngOnInit() {
     this.mockedEmployees = this.mockedEmployees = [
       {
