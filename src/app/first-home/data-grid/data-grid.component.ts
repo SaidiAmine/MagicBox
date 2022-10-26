@@ -1,13 +1,13 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Employee } from '../models/employee.model';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Employee } from '../../models/employee.model';
 
 @Component({
   selector: 'data-grid',
   templateUrl: './data-grid.component.html',
-  styleUrls: ['./data-grid.component.css'],
 })
 export class DataGridComponent implements OnInit {
   @Input() employees: Employee[];
+  @Output() selectedEmployee = new EventEmitter<Employee>();
   sortFlag = true;
 
   ngOnInit() {}
@@ -24,6 +24,10 @@ export class DataGridComponent implements OnInit {
         else return 1;
       } else return 0;
     });
+  }
+
+  selectEmployee(employee: any) {
+    this.selectedEmployee.emit(employee);
   }
 
 }

@@ -9,6 +9,8 @@ export class FirstHomeComponent implements OnInit {
 
   name = 'Angular ' + VERSION.major;
   mockedEmployees: Employee[] = [];
+  selectedEmployee: Employee = {};
+
   ngOnInit() {
     this.mockedEmployees = this.mockedEmployees = [
       {
@@ -60,5 +62,9 @@ export class FirstHomeComponent implements OnInit {
         id: 6,
       }
     ];
+  }
+
+  updateCurrentEmployee(selectedEmployee: any) {
+    this.selectedEmployee = selectedEmployee;
   }
 }
