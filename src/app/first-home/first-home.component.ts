@@ -3,8 +3,7 @@ import { Employee, Status } from '../models/employee.model';
 
 @Component({
   selector: 'app-first-home',
-  templateUrl: './first-home.component.html',
-  styleUrls: ['./first-home.component.css']
+  templateUrl: './first-home.component.html'
 })
 export class FirstHomeComponent implements OnInit {
 

@@ -8,9 +8,10 @@ import { DataGridComponent } from './data-grid/data-grid.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FirstHomeComponent } from './first-home/first-home.component';
+import { RouterModule } from '@angular/router';
 
-@NgModule({
-  imports:      [ BrowserModule, FormsModule, AppRoutingModule ],
+@NgModule({ // add RouterModule.forRoot([]) once routin added
+  imports:      [ BrowserModule, FormsModule, AppRoutingModule, RouterModule.forRoot([]) ],
   declarations: [ AppComponent, HelloComponent, DataGridComponent, NavigationComponent, FirstHomeComponent ],
   bootstrap:    [ AppComponent ]
 })
