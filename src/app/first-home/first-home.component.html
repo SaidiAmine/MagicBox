@@ -1,5 +1,8 @@
 <div class="row">
-  <hello [name]="name" class="col-sm-4 px-3 py-3"></hello>
+  <hello [name]="name"
+  [selectedEmployee]="selectedEmployee"
+  class="col-sm-4 px-3 py-3">
+  </hello>
   <data-grid
     (selectedEmployee)="updateCurrentEmployee($event)"
     [employees]="mockedEmployees"

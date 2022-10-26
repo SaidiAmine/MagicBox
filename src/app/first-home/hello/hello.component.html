@@ -1,3 +1,12 @@
-<p>
+<p *ngIf="(selectedEmployee | json) == '{}'">
 Hello World on {{name}}
 </p>
+
+<div *ngIf="(selectedEmployee | json) != '{}'" 
+class="card text-bg-primary mb-3" style="max-width: 18rem;">
+<div class="card-header">{{selectedEmployee.firstName + ' ' + selectedEmployee.lastName}}</div>
+<div class="card-body">
+  <h5 class="card-title">{{ selectedEmployee.salary | currency: selectedEmployee.currency.currencyCode }}</h5>
+  <p class="card-text">{{selectedEmployee?.description ? selectedEmployee?.description : 'Nothing to show here'}}</p>
+</div>
+</div>

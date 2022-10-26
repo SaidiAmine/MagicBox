@@ -5,6 +5,7 @@ export interface Employee {
   salary?: number;
   currency?: Currency;
   status?: Status;
+  description?: string;
 }
 
 export enum Status {

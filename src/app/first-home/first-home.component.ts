@@ -20,6 +20,7 @@ export class FirstHomeComponent implements OnInit {
         currency: {currencyCode: "EUR"},
         status: Status.CONS,
         id: 1,
+        description: 'One of the fanciest actors in the world!'
       },
       {
         firstName: 'Jennifer',
