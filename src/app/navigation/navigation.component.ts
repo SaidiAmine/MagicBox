@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'navigation',
   templateUrl: './navigation.component.html'
 })
+// EXPLAINED component for the header navigation bar
 export class NavigationComponent implements OnInit {
 
   constructor() { }

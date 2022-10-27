@@ -1,7 +1,7 @@
 <p *ngIf="(selectedEmployee | json) == '{}'">
 Hello World on {{name}}
 </p>
-
+<!-- EXPLAINED parsing the object to json object for nullability check -->
 <div *ngIf="(selectedEmployee | json) != '{}'" 
 class="card text-bg-primary mb-3" style="max-width: 18rem;">
 <div class="card-header">{{selectedEmployee.firstName + ' ' + selectedEmployee.lastName}}</div>

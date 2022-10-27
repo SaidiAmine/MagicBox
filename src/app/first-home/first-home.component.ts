@@ -5,10 +5,17 @@ import { Employee, Status } from '../models/employee.model';
   selector: 'app-first-home',
   templateUrl: './first-home.component.html'
 })
+// EXPLAINED this component follows the smart-dumb components design,
+// FirstHomeComponent acts like a controller and dispatches the data to its child components
+// Child components ( or dumb components ) which are DataGridComponent and 
+// HelloComponent act like views, their primary objective is to display data passed
+// through the @Input
 export class FirstHomeComponent implements OnInit {
 
   name = 'Angular ' + VERSION.major;
+  // EXPLAINED this attribute containes the mocked data to be shown
   mockedEmployees: Employee[] = [];
+  // EXPLAINED empty object that will get the selected data from the child component data-grid
   selectedEmployee: Employee = {};
 
   ngOnInit() {
