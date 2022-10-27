@@ -1,3 +1,20 @@
+## Angular 12 project to try out the basic use case of the
+## front end development frameworke
+## in this project you will find the different classes commented for a better explanation of what feature is being used.
+## Data binding 
+## Event binding
+## Routing
+## Use of angular directives
+## Use of angular predefined pipes ( currency pipe here )
+## Smart-dumb pattern for components
+## Data transfert between child and parent components
+## Use of Bootstrap 5.2 framework for front end beauty
+
+# TO BE ADDED
+## Interceptor
+## RxJs
+## NgRX
+
 # MagicBox
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.0.
